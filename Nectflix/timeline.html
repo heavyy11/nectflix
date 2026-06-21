@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Timeline - Nectflix</title>
+</head>
+<body>
+    <!-- Nav Bar -->
+    <nav class="navbar" id="nav">
+        <div class="nav-main">
+            <img src="images/logo.png" alt="Nectflix Logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mylist.html">My List</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+                <li><a href="following.html">Following</a></li>
+            </ul>
+        </div>
+        
+        <div class="nav-icons">
+            <div class="search-container">
+                <img src="images/icons/search.png" id="searchIcon" class="search-icon">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search movies...">
+            </div>
+            
+            <div class="profile-container">
+                <a href="profile.html"><img src="images/profile.png" alt="Profile" class="profile-pic"></a>
+
+                <div class="ribbon">
+                    <a href="login.html">Sign out</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="timeline-page">
+            <h1>Timeline</h1>
+            <p class="timeline-subtitle">
+                See what everyone's watching this week
+            </p>
+
+            <div id="myTimeline" class="timeline-slots"></div>
+        </div>
+
+        
+    </main>  
+    <!--Modal-->
+    <div id="movieModal" class="modal hidden">
+        <div class="modal-content">
+            <span id="closeModal">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+    <div id="searchModal" class="modal hidden">
+        <div class="modal-content">
+            <span id="closeSearchModal" class="close">&times;</span>
+            <h2 style="color:white;">Search Results</h2>
+            <div id="searchResults" class="movies"></div>
+        </div>
+    </div>
+
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="modal.js"></script>
+    <script type="module" src="movies.js"></script>
+    <script type="module" src="timeline.js"></script>
+</body>
+</html>
